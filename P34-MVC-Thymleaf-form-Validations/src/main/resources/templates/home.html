@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ANIMAL FORM</title>
+</head>
+<body>
+	<form th:action="@{/done}"  th:object="${animal}" th:method="post">
+		<table>
+			<tr>
+				<td>Animal Id :</td>
+				<td><input type="number" th:field="*{id}"/></td>
+			</tr>
+			<tr>
+				<td>Animal Name :</td>
+				<td><input type="text" th:field="*{name}"/></td>
+			</tr>
+			<tr>
+				<td>Animal Species :</td>
+				<td><input type="text" th:field="*{species}"/></td>
+			</tr>
+			<tr>
+				<td>Animal Location :</td>
+				<td><input type="text" th:field="*{loc}"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="submit"/></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
